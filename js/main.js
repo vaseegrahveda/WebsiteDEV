@@ -10,7 +10,7 @@
     var abPowderVal;
 
 
-    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone').keyup(function () {
+    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone').on('keyup input', function(){
         if ((($('.name').val() > 0) && ($('.address').val() > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
             $('button[id="contact100-form-btn"]').prop('disabled', false);
         }
