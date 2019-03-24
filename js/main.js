@@ -11,18 +11,7 @@
 
 
     $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone').on('keyup input', function () {
-        if ((($('.name').val() > 0) && ($('.address').val() > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
-            $('button[id="contact100-form-btn"]').prop('disabled', false);
-        }
-        else {
-            $('button[id="contact100-form-btn"]').prop('disabled', true);
-        }
-
-        totalAmountCalc();
-    });
-
-    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone').on('focusout', function () {
-        if ((($('.name').val() > 0) && ($('.address').val() > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
+        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
             $('button[id="contact100-form-btn"]').prop('disabled', false);
         }
         else {
@@ -106,26 +95,6 @@
 
         $('.totalAmount').val(total);
     }
-
-    // $('.contact100-form-btn').click(function () {
-    //     // if (true) {
-    //         // $('button[id="contact100-form-btn"]').prop('disabled',false);
-    //         setTimeout(function () {
-    //             $('.contact100-form').trigger("reset");
-    //             alert('Thanks for the order. Kindly send us your payment screenshot to confirm your order!')
-    //         }, 3000);
-    //     // }
-    //     // else {
-    //     //     $('button[id="contact100-form-btn"]').prop('disabled',true);
-    //     // }
-    // });
-    // $('.input100').on("click", function () {
-    // 	// if (pattern.test(userinput)) {
-    // 		$('button[id="contact100-form-btn"]').prop('disabled', false);
-    // 	// } else {
-    // 		// $('button[id="btn-subscribe"]').prop('disabled', true);
-    // 	// }
-    // });
 
     $('button[id="contact100-form-btn"]').click(function () {
         setTimeout(function () {
