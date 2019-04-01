@@ -11,6 +11,27 @@
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '2501201713243327');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=2501201713243327&ev=PageView&noscript=1" /></noscript>
+	<!-- End Facebook Pixel Code -->
+
+
 </head>
 
 <body>
@@ -28,7 +49,8 @@
 
 				<div class="wrap-input100 validate-input bg1">
 					<span class="label-input100">FULL NAME *</span>
-					<input class="input100 name" type="text" name="entry.2069825357" placeholder="Enter your name" required>
+					<input class="input100 name" type="text" name="entry.2069825357" placeholder="Enter your name"
+						required>
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
@@ -38,22 +60,72 @@
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Pincode *</span>
-					<input class="input100 pincode" type="number" name="entry.1998114886" placeholder="Enter your pincode "
-						max="999999" required>
+					<span class="label-input100">City/District *</span>
+					<input class="input100 city" type="text" name="entry.173293301"
+						placeholder="Enter your city or district " required>
 				</div>
 
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">State *</span>
+					<select name="stateslist" class="input100 state" name="entry.693268433" required>
+						<option class="" value=""></option>
+						<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+						<option value="Daman and Diu">Daman and Diu</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Lakshadweep">Lakshadweep</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Orissa">Orissa</option>
+						<option value="Pondicherry">Pondicherry</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttaranchal">Uttaranchal</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="West Bengal">West Bengal</option>
+					</select>
+				</div>
+
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Pincode *</span>
+					<input class="input100 pincode" type="number" name="entry.1998114886"
+						placeholder="Enter your pincode " max="999999" required>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Phone *</span>
+					<input class="input100 phone" type="number" name="entry.1166974658" placeholder="Enter phone number"
+						max="9999999999" required>
+				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Email</span>
 					<input class="input100 email" type="email" name="entry.1224580138" placeholder="Enter your email ">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Phone *</span>
-					<input class="input100 phone" type="number" name="entry.1166974658" placeholder="Enter phone number"
-						required>
-				</div>
+
 
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">HAIR FALL CTRL OIL/HAIR GROWTH OIL - (150 ml)</span>
@@ -112,8 +184,18 @@
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Product Cost</span> <span class="rupee-symbol">&nbsp; (&#8377;)</span>
+					<input class="input100 productCost" type="number" value="0" name="entry.1169048592" readonly>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100 shippig-panel">
+					<span class="label-input100">Shipping</span> <span class="rupee-symbol">&nbsp; (&#8377;)</span>
+					<input class="input100 shipping" type="number" value="40" name="entry.2006012518" readonly>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Total Amount</span> <span class="rupee-symbol">&nbsp; (&#8377;)</span>
-					<input class="input100 totalAmount" type="number" value="0" name="entry.1169048592" readonly>
+					<input class="input100 totalAmount" type="number" value="0" name="entry.1862665094" readonly>
 				</div>
 
 				<div class="container-contact100-form-btn">

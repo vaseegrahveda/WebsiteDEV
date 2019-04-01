@@ -737,3 +737,7 @@ textarea.input100 {
   line-height: 1.2;
   padding-right: 15px;
 }
+
+.shipping-disabled{
+  opacity: 0.5;
+}

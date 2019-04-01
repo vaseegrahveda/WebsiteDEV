@@ -1,6 +1,6 @@
 (function ($) {
 
-    var total = 0;
+    var total, finalTotal = 0;
     var hfcOilVal;
     var hdcOilVal;
     var hbOilVal;
@@ -10,8 +10,8 @@
     var abPowderVal;
 
 
-    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone').on('keyup input', function () {
-        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
+    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone,.city,.state').on('keyup input', function () {
+        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0) && ($('.city').val().length > 0) && ($('.state').val().length > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
             $('button[id="contact100-form-btn"]').prop('disabled', false);
         }
         else {
@@ -29,6 +29,7 @@
         hhWashVal = $('.hhWash').val();
         rpbPowderVal = $('.rpbPowder').val();
         abPowderVal = $('.abPowder').val();
+        stateVal = $('.state').val();
 
         if (hfcOilVal >= 0 && hfcOilVal < 4) {
             hfcOilVal = hfcOilVal * 175;
@@ -92,8 +93,23 @@
             abPowderVal = abPowderVal * 90;
         }
         total = total + abPowderVal;
-
-        $('.totalAmount').val(total);
+        if (total >= 400 || stateVal === 'Tamil Nadu') {
+            finalTotal = total;
+            $('.shipping').val(0);
+            $('.shippig-panel').addClass("shipping-disabled");
+        }
+        else {
+            $('.shippig-panel').removeClass("shipping-disabled");
+            $('.shipping').val(40);
+            finalTotal = total + 40;
+        }
+        $('.productCost').val(total);
+        if (total > 0) {
+            $('.totalAmount').val(finalTotal);
+        }
+        else {
+            $('.totalAmount').val(0);
+        }
     }
 
     $('button[id="contact100-form-btn"]').click(function () {
