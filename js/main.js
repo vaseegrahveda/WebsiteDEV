@@ -117,7 +117,7 @@
             $('.contact100-form').trigger("reset");
             $('button[id="contact100-form-btn"]').prop('disabled', true);
             alert('Thanks for the order. Kindly send us your payment screenshot to confirm your order!')
-        }, 3000);
+        }, 500);
     });
 
 })(jQuery);
