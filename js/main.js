@@ -88,7 +88,7 @@
         if (abPowderVal >= 0 && abPowderVal < 4) {
             abPowderVal = abPowderVal * 110;
         } else if (abPowderVal >= 4 && abPowderVal < 10) {
-            hhWashVal = abPowderVal * 100;
+            abPowderVal = abPowderVal * 100;
         } else if (abPowderVal >= 10) {
             abPowderVal = abPowderVal * 90;
         }
