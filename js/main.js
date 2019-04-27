@@ -77,11 +77,11 @@
         total = total + hhWashVal;
 
         if (rpbPowderVal >= 0 && rpbPowderVal < 4) {
-            rpbPowderVal = rpbPowderVal * 110;
+            rpbPowderVal = rpbPowderVal * 165;
         } else if (rpbPowderVal >= 4 && rpbPowderVal < 10) {
-            rpbPowderVal = rpbPowderVal * 100;
+            rpbPowderVal = rpbPowderVal * 155;
         } else if (rpbPowderVal >= 10) {
-            rpbPowderVal = rpbPowderVal * 90;
+            rpbPowderVal = rpbPowderVal * 145;
         }
         total = total + rpbPowderVal;
 
