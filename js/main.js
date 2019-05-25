@@ -8,10 +8,12 @@
     var hhWashVal;
     var rpbPowderVal;
     var abPowderVal;
+    var mbPowderVal;
+    var hmForCurlsVal;
 
 
-    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.name,.address,.pincode,.phone,.city,.state').on('keyup input', function () {
-        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0) && ($('.city').val().length > 0) && ($('.state').val().length > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0)) {
+    $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.mbPowder,.hmForCurls,.name,.address,.pincode,.phone,.city,.state').on('keyup input', function () {
+        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val() > 0) && ($('.city').val().length > 0) && ($('.state').val().length > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0) || $('.mbPowder').val() > 0 || $('.hmForCurls').val() > 0) {
             $('button[id="contact100-form-btn"]').prop('disabled', false);
         }
         else {
@@ -29,6 +31,8 @@
         hhWashVal = $('.hhWash').val();
         rpbPowderVal = $('.rpbPowder').val();
         abPowderVal = $('.abPowder').val();
+        mbPowderVal = $('.mbPowder').val();
+        hmForCurlsVal = $('.hmForCurls').val();
         stateVal = $('.state').val();
 
         if (hfcOilVal >= 0 && hfcOilVal < 4) {
@@ -93,6 +97,22 @@
             abPowderVal = abPowderVal * 90;
         }
         total = total + abPowderVal;
+
+        if (mbPowderVal >= 0 && mbPowderVal < 4) {
+            mbPowderVal = mbPowderVal * 120;
+        } else if (mbPowderVal >= 4 && mbPowderVal < 10) {
+            mbPowderVal = mbPowderVal * 110;
+        } else if (mbPowderVal >= 10) {
+            mbPowderVal = mbPowderVal * 100;
+        }
+        total = total + mbPowderVal;
+
+        if (hmForCurlsVal >= 0) {
+            hmForCurlsVal = hmForCurlsVal * 185;
+        }
+        total = total + hmForCurlsVal;
+
+
         if (total >= 400 || stateVal === 'Tamil Nadu') {
             finalTotal = total;
             $('.shipping').val(0);
@@ -113,11 +133,16 @@
     }
 
     $('button[id="contact100-form-btn"]').click(function () {
+        localStorage.setItem("name", ($('.name').val()));
         setTimeout(function () {
             $('.contact100-form').trigger("reset");
             $('button[id="contact100-form-btn"]').prop('disabled', true);
-            alert('Hurrah! Thanks for your order. Kindly send us the payment screenshot to confirm your order!')
+            window.location.href = 'thankspage/thanks.html';
         }, 500);
     });
+
+    if (!!localStorage.getItem("name")) {
+        document.getElementById("cus_name").innerHTML = localStorage.getItem("name");
+    }
 
 })(jQuery);
