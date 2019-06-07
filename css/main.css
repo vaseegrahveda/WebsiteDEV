@@ -782,6 +782,11 @@ textarea.input100 {
   float: right;
 }
 
-.payment_details{
+.payment_details {
   display: block;
+}
+
+.required-field-symbol {
+  font-size: 14px;
+  color: red;
 }
