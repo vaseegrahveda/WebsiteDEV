@@ -54,7 +54,7 @@
 
         if (hbOilVal >= 0 && hbOilVal < 4) {
             hbOilVal = hbOilVal * 145;
-        } else if (hbOilVal >= 4 && hbOilVal < 10) {
+        } else if (hbOilVal >= 5 && hbOilVal < 10) {
             hbOilVal = hbOilVal * 135;
         } else if (hbOilVal >= 10) {
             hbOilVal = hbOilVal * 125;
@@ -63,7 +63,7 @@
 
         if (hhMaskVal >= 0 && hhMaskVal < 4) {
             hhMaskVal = hhMaskVal * 155;
-        } else if (hhMaskVal >= 4 && hhMaskVal < 10) {
+        } else if (hhMaskVal >= 5 && hhMaskVal < 10) {
             hhMaskVal = hhMaskVal * 145;
         } else if (hhMaskVal >= 10) {
             hhMaskVal = hhMaskVal * 140;
@@ -72,7 +72,7 @@
 
         if (hhWashVal >= 0 && hhWashVal < 4) {
             hhWashVal = hhWashVal * 120;
-        } else if (hhWashVal >= 4 && hhWashVal < 10) {
+        } else if (hhWashVal >= 5 && hhWashVal < 10) {
             hhWashVal = hhWashVal * 110;
         } else if (hhWashVal >= 10) {
             hhWashVal = hhWashVal * 100;
@@ -81,7 +81,7 @@
 
         if (rpbPowderVal >= 0 && rpbPowderVal < 4) {
             rpbPowderVal = rpbPowderVal * 165;
-        } else if (rpbPowderVal >= 4 && rpbPowderVal < 10) {
+        } else if (rpbPowderVal >= 5 && rpbPowderVal < 10) {
             rpbPowderVal = rpbPowderVal * 155;
         } else if (rpbPowderVal >= 10) {
             rpbPowderVal = rpbPowderVal * 145;
@@ -90,7 +90,7 @@
 
         if (abPowderVal >= 0 && abPowderVal < 4) {
             abPowderVal = abPowderVal * 110;
-        } else if (abPowderVal >= 4 && abPowderVal < 10) {
+        } else if (abPowderVal >= 5 && abPowderVal < 10) {
             abPowderVal = abPowderVal * 100;
         } else if (abPowderVal >= 10) {
             abPowderVal = abPowderVal * 90;
@@ -99,7 +99,7 @@
 
         if (mbPowderVal >= 0 && mbPowderVal < 4) {
             mbPowderVal = mbPowderVal * 120;
-        } else if (mbPowderVal >= 4 && mbPowderVal < 10) {
+        } else if (mbPowderVal >= 5 && mbPowderVal < 10) {
             mbPowderVal = mbPowderVal * 110;
         } else if (mbPowderVal >= 10) {
             mbPowderVal = mbPowderVal * 100;
