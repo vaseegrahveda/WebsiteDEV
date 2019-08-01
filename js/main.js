@@ -52,7 +52,7 @@
         }
         total = total + hdcOilVal;
 
-        if (hbOilVal >= 0 && hbOilVal < 4) {
+        if (hbOilVal >= 0 && hbOilVal < 5) {
             hbOilVal = hbOilVal * 145;
         } else if (hbOilVal >= 5 && hbOilVal < 10) {
             hbOilVal = hbOilVal * 135;
@@ -61,7 +61,7 @@
         }
         total = total + hbOilVal;
 
-        if (hhMaskVal >= 0 && hhMaskVal < 4) {
+        if (hhMaskVal >= 0 && hhMaskVal < 5) {
             hhMaskVal = hhMaskVal * 155;
         } else if (hhMaskVal >= 5 && hhMaskVal < 10) {
             hhMaskVal = hhMaskVal * 145;
@@ -70,7 +70,7 @@
         }
         total = total + hhMaskVal;
 
-        if (hhWashVal >= 0 && hhWashVal < 4) {
+        if (hhWashVal >= 0 && hhWashVal < 5) {
             hhWashVal = hhWashVal * 120;
         } else if (hhWashVal >= 5 && hhWashVal < 10) {
             hhWashVal = hhWashVal * 110;
@@ -79,7 +79,7 @@
         }
         total = total + hhWashVal;
 
-        if (rpbPowderVal >= 0 && rpbPowderVal < 4) {
+        if (rpbPowderVal >= 0 && rpbPowderVal < 5) {
             rpbPowderVal = rpbPowderVal * 165;
         } else if (rpbPowderVal >= 5 && rpbPowderVal < 10) {
             rpbPowderVal = rpbPowderVal * 155;
@@ -88,7 +88,7 @@
         }
         total = total + rpbPowderVal;
 
-        if (abPowderVal >= 0 && abPowderVal < 4) {
+        if (abPowderVal >= 0 && abPowderVal < 5) {
             abPowderVal = abPowderVal * 110;
         } else if (abPowderVal >= 5 && abPowderVal < 10) {
             abPowderVal = abPowderVal * 100;
@@ -97,7 +97,7 @@
         }
         total = total + abPowderVal;
 
-        if (mbPowderVal >= 0 && mbPowderVal < 4) {
+        if (mbPowderVal >= 0 && mbPowderVal < 5) {
             mbPowderVal = mbPowderVal * 120;
         } else if (mbPowderVal >= 5 && mbPowderVal < 10) {
             mbPowderVal = mbPowderVal * 110;
