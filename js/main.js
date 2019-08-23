@@ -13,7 +13,7 @@
 
 
     $('.hfcOil,.hdcOil,.hbOil,.hhMask,.hhWash,.rpbPowder,.abPowder,.mbPowder,.hmForCurls,.name,.address,.pincode,.phone,.city,.state').on('keyup input', function () {
-        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val().length > 0) && ($('.city').val().length > 0) && ($('.state').val().length > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0 ) || $('.mbPowder').val() > 0 || $('.hmForCurls').val() > 0) {
+        if ((($('.name').val().length > 0) && ($('.address').val().length > 0) && ($('.pincode').val() > 0) && ($('.phone').val().length > 0) && ($('.city').val().length > 0) && ($('.state').val().length > 0)) && ($('.hfcOil').val() > 0 || $('.hdcOil').val() > 0 || $('.hbOil').val() > 0 || $('.hhMask').val() > 0 || $('.hhWash').val() > 0 || $('.rpbPowder').val() > 0 || $('.abPowder').val() > 0) || $('.mbPowder').val() > 0 || $('.hmForCurls').val() > 0) {
             $('button[id="contact100-form-btn"]').prop('disabled', false);
         }
         else {
